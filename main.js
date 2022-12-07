@@ -59,7 +59,7 @@ function updateUI(animalInfo) {
 function fetchAnimals(animal, zip) {
   // fetch pets
   // get data using the token
-  fetch(`https://api.petfinder.com/v2/animals/?type=${animal}&contact.address.postcode=${zip}`, {
+  fetch(`https://api.petfinder.com/v2/animals?type=${animal}&location=${zip}&callback=callback`, {
     method: 'GET',
     headers: {
       Authorization: `Bearer ${token}`
